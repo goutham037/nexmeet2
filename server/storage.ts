@@ -124,8 +124,20 @@ export class MemStorage implements IStorage {
   async createUser(insertUser: InsertUser): Promise<User> {
     const id = this.generateId();
     const user: User = { 
-      ...insertUser, 
       id,
+      email: insertUser.email,
+      firstName: insertUser.firstName ?? null,
+      lastName: insertUser.lastName ?? null,
+      age: insertUser.age ?? null,
+      gender: (insertUser.gender as "male" | "female") ?? null,
+      bio: insertUser.bio ?? null,
+      interests: Array.isArray(insertUser.interests) ? insertUser.interests : null,
+      profilePhoto: insertUser.profilePhoto ?? null,
+      isVerified: insertUser.isVerified ?? false,
+      verificationStatus: insertUser.verificationStatus ?? "none",
+      premiumTier: insertUser.premiumTier ?? "free",
+      location: insertUser.location ?? null,
+      preferences: insertUser.preferences ?? null,
       createdAt: new Date(),
       lastActive: new Date(),
     };
@@ -138,8 +150,20 @@ export class MemStorage implements IStorage {
     if (!user) return undefined;
 
     const updatedUser: User = { 
-      ...user, 
-      ...updates,
+      ...user,
+      email: updates.email ?? user.email,
+      firstName: updates.firstName ?? user.firstName,
+      lastName: updates.lastName ?? user.lastName,
+      age: updates.age ?? user.age,
+      gender: (updates.gender as "male" | "female") ?? user.gender,
+      bio: updates.bio ?? user.bio,
+      interests: updates.interests ?? user.interests,
+      profilePhoto: updates.profilePhoto ?? user.profilePhoto,
+      isVerified: updates.isVerified ?? user.isVerified,
+      verificationStatus: updates.verificationStatus ?? user.verificationStatus,
+      premiumTier: updates.premiumTier ?? user.premiumTier,
+      location: updates.location ?? user.location,
+      preferences: updates.preferences ?? user.preferences,
       lastActive: new Date(),
     };
     this.users.set(id, updatedUser);
