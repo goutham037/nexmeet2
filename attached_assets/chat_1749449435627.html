@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+  <title>NexMeet · Chat</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Reuse gradient background -->
+  <div class="landing-bg"></div>
+
+  <div class="chat-container fade-in">
+    <header class="chat-header">
+      <h2 class="chat-status">Connecting...</h2>
+      <button id="leaveBtn" class="btn-secondary btn-sm btn-animated">
+        Leave Chat
+      </button>
+    </header>
+
+    <div id="chatWindow" class="chat-window">
+      <!-- Messages will be appended here -->
+    </div>
+
+    <form id="messageForm" class="message-form">
+      <input
+        type="text"
+        id="messageInput"
+        class="input-field input-animated"
+        placeholder="Type a message..."
+        autocomplete="off"
+      />
+      <button type="submit" class="btn-primary btn-animated">
+        Send
+      </button>
+    </form>
+  </div>
+
+  <!-- Socket.IO client -->
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="chat.js"></script>
+</body>
+</html>
