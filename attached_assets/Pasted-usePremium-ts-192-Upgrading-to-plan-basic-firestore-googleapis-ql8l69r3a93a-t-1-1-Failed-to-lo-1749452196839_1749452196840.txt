@@ -1,0 +1,25 @@
+usePremium.ts:192 Upgrading to plan: basic
+firestore.googleapis…=ql8l69r3a93a&t=1:1 
+ Failed to load resource: the server responded with a status of 400 ()
+chunk-WD64COPP.js?v=64facd8d:1206 [2025-06-09T06:52:22.329Z]  @firebase/firestore: Firestore (11.9.0): WebChannelConnection RPC 'Listen' stream 0x1cf64fc8 transport errored. Name: undefined Message: undefined
+firestore.googleapis…=wwosb1ooq1xv&t=1:1 
+ Failed to load resource: the server responded with a status of 400 ()
+chunk-WD64COPP.js?v=64facd8d:1206 [2025-06-09T06:52:22.606Z]  @firebase/firestore: Firestore (11.9.0): WebChannelConnection RPC 'Listen' stream 0x1cf64fc9 transport errored. Name: undefined Message: undefined
+firestore.googleapis…=e7jd2gyeuv3a&t=1:1 
+ Failed to load resource: the server responded with a status of 400 ()
+chunk-WD64COPP.js?v=64facd8d:1206 [2025-06-09T06:52:23.090Z]  @firebase/firestore: Firestore (11.9.0): WebChannelConnection RPC 'Listen' stream 0x1cf64fca transport errored. Name: undefined Message: undefined
+firestore.googleapis…=8fl6lhwmss41&t=1:1 
+ Failed to load resource: the server responded with a status of 400 ()
+chunk-WD64COPP.js?v=64facd8d:1206 [2025-06-09T06:52:24.941Z]  @firebase/firestore: Firestore (11.9.0): WebChannelConnection RPC 'Listen' stream 0x1cf64fcb transport errored. Name: undefined Message: undefined
+firestore.googleapis…=jhx7avhy8utj&t=1:1 
+ Failed to load resource: the server responded with a status of 400 ()
+chunk-WD64COPP.js?v=64facd8d:1206 [2025-06-09T06:52:28.121Z]  @firebase/firestore: Firestore (11.9.0): WebChannelConnection RPC 'Listen' stream 0x1cf64fcc transport errored. Name: undefined Message: undefined
+firestore.googleapis…=2oqxhybi8o69&t=1:1 
+ Failed to load resource: the server responded with a status of 400 ()
+chunk-WD64COPP.js?v=64facd8d:1206 [2025-06-09T06:52:32.886Z]  @firebase/firestore: Firestore (11.9.0): WebChannelConnection RPC 'Listen' stream 0x1cf64fcd transport errored. Name: undefined Message: undefined
+firestore.googleapis…=wpactlnvlz7f&t=1:1 
+ Failed to load resource: the server responded with a status of 400 ()
+chunk-WD64COPP.js?v=64facd8d:1206 [2025-06-09T06:52:37.577Z]  @firebase/firestore: Firestore (11.9.0): WebChannelConnection RPC 'Listen' stream 0x1cf64fce transport errored. Name: undefined Message: undefined
+
+useAuth.ts:60 Error fetching user data: FirebaseError: Failed to get document because the client is offline.
+﻿

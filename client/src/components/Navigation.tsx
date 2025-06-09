@@ -31,26 +31,18 @@ export function Navigation() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <Link href="/">
-              <a className={`text-gray-700 hover:text-pink-500 transition-colors ${isActive('/') ? 'text-pink-500 font-medium' : ''}`}>
-                Home
-              </a>
+            <Link href="/" className={`text-gray-700 hover:text-pink-500 transition-colors ${isActive('/') ? 'text-pink-500 font-medium' : ''}`}>
+              Home
             </Link>
-            <Link href="/features">
-              <a className={`text-gray-700 hover:text-pink-500 transition-colors ${isActive('/features') ? 'text-pink-500 font-medium' : ''}`}>
-                Features
-              </a>
+            <Link href="/features" className={`text-gray-700 hover:text-pink-500 transition-colors ${isActive('/features') ? 'text-pink-500 font-medium' : ''}`}>
+              Features
             </Link>
-            <Link href="/premium">
-              <a className={`text-gray-700 hover:text-pink-500 transition-colors ${isActive('/premium') ? 'text-pink-500 font-medium' : ''}`}>
-                Premium
-              </a>
+            <Link href="/premium" className={`text-gray-700 hover:text-pink-500 transition-colors ${isActive('/premium') ? 'text-pink-500 font-medium' : ''}`}>
+              Premium
             </Link>
             {user && (
-              <Link href="/app">
-                <a className={`text-gray-700 hover:text-pink-500 transition-colors ${isActive('/app') ? 'text-pink-500 font-medium' : ''}`}>
-                  App
-                </a>
+              <Link href="/app" className={`text-gray-700 hover:text-pink-500 transition-colors ${isActive('/app') ? 'text-pink-500 font-medium' : ''}`}>
+                App
               </Link>
             )}
           </div>
@@ -122,19 +114,19 @@ export function Navigation() {
       {isMobileMenuOpen && (
         <div className="md:hidden bg-white border-b border-gray-200">
           <div className="px-4 py-4 space-y-4">
-            <Link href="/">
-              <a className="block text-gray-700 hover:text-pink-500 transition-colors">Home</a>
+            <Link href="/" className="block text-gray-700 hover:text-pink-500 transition-colors">
+              Home
             </Link>
-            <Link href="/features">
-              <a className="block text-gray-700 hover:text-pink-500 transition-colors">Features</a>
+            <Link href="/features" className="block text-gray-700 hover:text-pink-500 transition-colors">
+              Features
             </Link>
-            <Link href="/premium">
-              <a className="block text-gray-700 hover:text-pink-500 transition-colors">Premium</a>
+            <Link href="/premium" className="block text-gray-700 hover:text-pink-500 transition-colors">
+              Premium
             </Link>
             {user ? (
               <>
-                <Link href="/app">
-                  <a className="block text-gray-700 hover:text-pink-500 transition-colors">App</a>
+                <Link href="/app" className="block text-gray-700 hover:text-pink-500 transition-colors">
+                  App
                 </Link>
                 <Button
                   variant="ghost"

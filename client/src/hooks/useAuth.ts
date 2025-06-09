@@ -56,9 +56,13 @@ export function useAuth() {
             await setDoc(doc(db, 'users', firebaseUser.uid), newUser);
             setUser(newUser as User);
           }
-        } catch (error) {
+        } catch (error: any) {
           console.error('Error fetching user data:', error);
-          setError('Failed to load user data');
+          if (error.code === 'failed-precondition' || error.code === 'unavailable') {
+            setError('firebase-setup-required');
+          } else {
+            setError('Failed to load user data');
+          }
         }
       } else {
         setUser(null);

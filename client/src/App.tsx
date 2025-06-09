@@ -16,6 +16,7 @@ import { VideoCallPage } from "@/pages/VideoCallPage";
 import { PremiumPage } from "@/pages/PremiumPage";
 import { WaitlistPage } from "@/pages/WaitlistPage";
 import { UnderDevelopmentPage } from "@/pages/UnderDevelopmentPage";
+import { FeaturesPage } from "@/pages/FeaturesPage";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -31,7 +32,7 @@ function Router() {
       <Route path="/premium" component={PremiumPage} />
       <Route path="/waitlist" component={WaitlistPage} />
       <Route path="/under-development" component={UnderDevelopmentPage} />
-      <Route path="/features" component={HomePage} />
+      <Route path="/features" component={FeaturesPage} />
       <Route component={NotFound} />
     </Switch>
   );
