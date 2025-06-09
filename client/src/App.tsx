@@ -3,9 +3,10 @@ import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import { AuthProvider } from "@/contexts/AuthContext";
+import { AuthProvider, useAuthContext } from "@/contexts/AuthContext";
 import { PremiumProvider } from "@/contexts/PremiumContext";
 import { Navigation } from "@/components/Navigation";
+import { FirebaseSetupGuide } from "@/components/FirebaseSetupGuide";
 import { HomePage } from "@/pages/HomePage";
 import { AuthPage } from "@/pages/AuthPage";
 import { ProfileSetupPage } from "@/pages/ProfileSetupPage";
@@ -18,6 +19,31 @@ import { WaitlistPage } from "@/pages/WaitlistPage";
 import { UnderDevelopmentPage } from "@/pages/UnderDevelopmentPage";
 import { FeaturesPage } from "@/pages/FeaturesPage";
 import NotFound from "@/pages/not-found";
+
+function AppContent() {
+  const { error } = useAuthContext();
+
+  if (error === 'firebase-setup-required') {
+    return (
+      <div className="min-h-screen bg-background">
+        <Navigation />
+        <main className="pt-16">
+          <FirebaseSetupGuide />
+        </main>
+      </div>
+    );
+  }
+
+  return (
+    <div className="min-h-screen bg-background">
+      <Navigation />
+      <main>
+        <Router />
+      </main>
+      <Toaster />
+    </div>
+  );
+}
 
 function Router() {
   return (
@@ -44,13 +70,7 @@ function App() {
       <AuthProvider>
         <PremiumProvider>
           <TooltipProvider>
-            <div className="min-h-screen bg-background">
-              <Navigation />
-              <main>
-                <Router />
-              </main>
-              <Toaster />
-            </div>
+            <AppContent />
           </TooltipProvider>
         </PremiumProvider>
       </AuthProvider>
